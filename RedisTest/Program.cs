@@ -41,7 +41,7 @@ namespace RedisTest
                             Random r = new Random(DateTime.Now.Millisecond);
                             var length = r.Next(100, 30000);
 
-                            value = GetRandomString(length);
+                            value = StringExtensions.GetRandomString(length);
                             client.Set(key, value, new TimeSpan(0, 0, 50));
                         }
                         Console.WriteLine("Cache set {0}: {1}", key, value.Length);
@@ -50,16 +50,6 @@ namespace RedisTest
             }
 
             redis.CreateClient().ClearByPattern("Thread");
-        }
-
-        public static string GetRandomString(int length)
-        {
-            var sb = new StringBuilder();
-            while (sb.Length < length)
-                sb.Append(Path.GetRandomFileName());
-            return sb.ToString().Substring(0, length);
-        }     
-
-        
+        }       
     }
 }

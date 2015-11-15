@@ -36,14 +36,13 @@ namespace RedisTest
                     else
                     {
                         Console.WriteLine("Thread {0} creating value...", i);
-                        using (var webclient = new WebClient())
-                        {
-                            Random r = new Random(DateTime.Now.Millisecond);
-                            var length = r.Next(100, 30000);
 
-                            value = GetRandomString(length);
-                            client.Set(key, value, new TimeSpan(0, 0, 50));
-                        }
+                        Random r = new Random(DateTime.Now.Millisecond);
+                        var length = r.Next(100, 30000);
+
+                        value = GetRandomString(length);
+                        client.Set(key, value, new TimeSpan(0, 0, 50));
+
                         Console.WriteLine("Cache set {0}: {1}", key, value.Length);
                     }
                 });

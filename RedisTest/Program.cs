@@ -37,28 +37,24 @@ namespace RedisTest
                     {
                         Console.WriteLine("Thread {0} creating value...", i);
 
+<<<<<<< .merge_file_a06684
                         Random r = new Random(DateTime.Now.Millisecond);
                         var length = r.Next(100, 30000);
 
                         value = GetRandomString(length);
                         client.Set(key, value, new TimeSpan(0, 0, 50));
 
+=======
+                            value = StringExtensions.GetRandomString(length);
+                            client.Set(key, value, new TimeSpan(0, 0, 50));
+                        }
+>>>>>>> .merge_file_a09896
                         Console.WriteLine("Cache set {0}: {1}", key, value.Length);
                     }
                 });
             }
 
             redis.CreateClient().ClearByPattern("Thread");
-        }
-
-        public static string GetRandomString(int length)
-        {
-            var sb = new StringBuilder();
-            while (sb.Length < length)
-                sb.Append(Path.GetRandomFileName());
-            return sb.ToString().Substring(0, length);
-        }     
-
-        
+        }       
     }
 }

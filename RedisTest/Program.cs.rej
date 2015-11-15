@@ -1,0 +1,9 @@
+diff a/RedisTest/Program.cs b/RedisTest/Program.cs	(rejected hunks)
+@@ -41,6 +41,7 @@
+                             Random r = new Random(DateTime.Now.Millisecond);
+                             var length = r.Next(100, 30000);
+ 
++                            value = StringExtensions.GetRandomString(length);
+                             client.Set(key, value, new TimeSpan(0, 0, 50));
+                         }
+                         Console.WriteLine("Cache set {0}: {1}", key, value.Length);

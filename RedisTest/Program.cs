@@ -62,7 +62,7 @@ namespace RedisTest
         private static string CreateRandomLengthString(int minlength, int maxlength, Random random = null)
         {
             Random r = random ?? new Random(DateTime.Now.Millisecond);
-            var length = r.Next(100, 30000);
+            var length = r.Next(minlength, maxlength);
 
             return StringExtensions.GetRandomString(length);
         }

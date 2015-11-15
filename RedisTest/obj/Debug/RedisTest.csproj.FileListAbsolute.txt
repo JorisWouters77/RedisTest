@@ -1,0 +1,9 @@
+C:\Development\RedisTest\RedisTest\bin\Debug\RedisTest.exe.config
+C:\Development\RedisTest\RedisTest\bin\Debug\RedisTest.exe
+C:\Development\RedisTest\RedisTest\bin\Debug\RedisTest.pdb
+C:\Development\RedisTest\RedisTest\bin\Debug\StackExchange.Redis.dll
+C:\Development\RedisTest\RedisTest\bin\Debug\StackExchange.Redis.pdb
+C:\Development\RedisTest\RedisTest\bin\Debug\StackExchange.Redis.xml
+C:\Development\RedisTest\RedisTest\obj\Debug\RedisTest.csprojResolveAssemblyReference.cache
+C:\Development\RedisTest\RedisTest\obj\Debug\RedisTest.exe
+C:\Development\RedisTest\RedisTest\obj\Debug\RedisTest.pdb
